@@ -96,12 +96,28 @@ setup_state <- function(sol_code = "",
     list(type = "r-error", payload = paste0("Error: ", item$message))  
   }
   
+  get_allow_solution_error <- function() {
+    getOption("testwhat.allow_solution_error", FALSE)
+  }
+  
+  set_allow_solution_error <- function(value = FALSE) {
+    options("testwhat.allow_solution_error" = value)
+  }
+  
+  get_error_level <- function() {
+    if (get_allow_solution_error()) 1 else 2
+  }
+  
+  # record initial external options that may change during the exercise
+  initial_allow_solution_error <- get_allow_solution_error()
+  
   if (is.null(sol_env)) {
     sol_env <- new_env()
     tw$set(sol_env = sol_env)
     withr::with_seed(123, {
       evaluate::evaluate(pec, envir = sol_env, stop_on_error = 2)
-      evaluate::evaluate(sol_code_to_run, envir = sol_env, stop_on_error = 2)
+      evaluate::evaluate(sol_code_to_run, envir = sol_env,
+                         stop_on_error = get_error_level())
     })
   }
   
@@ -122,6 +138,9 @@ setup_state <- function(sol_code = "",
   tw$clear()
   tw$set(success_msg = "Great work!")
   
+  # reset options that may have been changed by the exercise
+  set_allow_solution_error(initial_allow_solution_error)
+  
   state <- RootState$new(
     pec = pec,
     student_code = stu_code,
@@ -138,6 +157,21 @@ setup_state <- function(sol_code = "",
   # testwhat will access the reporter and state from the tw object
   tw$set(state = state, stack = TRUE, seed = 42)
   return(invisible(tw$get("state")))
+}
+
+
+#' Set a flag allowing student code to produce an error.
+#' 
+#' When your exercise is supposed to produce an error, include this function in 
+#' your pre-exercise code to set a flag that allows the code to return the state
+#' without error-ing out. **Disclaimer**: this is just an attempt to emulate
+#' what would happen if you did the same thing in a DataCamp exercise, but we
+#' have no idea if it that how DataCamp actually accomplishes this.
+#'
+#' @return
+#' @export
+allow_solution_error <- function() {
+  base::options(testwhat.allow_solution_error = TRUE)
 }
 
 new_env <- function() {
