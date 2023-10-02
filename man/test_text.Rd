@@ -4,8 +4,13 @@
 \alias{test_text}
 \title{Test inline text and formatting (Markdown)}
 \usage{
-test_text(text, format = "any", freq = 1, not_called_msg = NULL,
-  incorrect_msg = NULL)
+test_text(
+  text,
+  format = "any",
+  freq = 1,
+  not_called_msg = NULL,
+  incorrect_msg = NULL
+)
 }
 \arguments{
 \item{text}{Text to match (can be a regular expression!)}

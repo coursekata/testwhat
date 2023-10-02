@@ -4,9 +4,19 @@
 \alias{test_exercise}
 \title{Run all tests for an exercise}
 \usage{
-test_exercise(sct, ex_type, pec, student_code, solution_code, student_env,
-  solution_env, output_list, allow_errors = FALSE,
-  force_diagnose = FALSE, seed = 42)
+test_exercise(
+  sct,
+  ex_type,
+  pec,
+  student_code,
+  solution_code,
+  student_env,
+  solution_env,
+  output_list,
+  allow_errors = FALSE,
+  force_diagnose = FALSE,
+  seed = 42
+)
 }
 \arguments{
 \item{sct}{Submission correctness tests as a character string.}

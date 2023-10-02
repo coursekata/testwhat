@@ -4,7 +4,9 @@
 \name{tw}
 \alias{tw}
 \title{tw singleton object to access data across SCT chains.}
-\format{An object of class \code{list} of length 4.}
+\format{
+An object of class \code{list} of length 4.
+}
 \usage{
 tw
 }

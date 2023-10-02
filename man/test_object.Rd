@@ -16,14 +16,32 @@ check_column(state, col, col_missing_msg = NULL, append = TRUE)
 
 check_element(state, el, el_missing_msg = NULL, append = TRUE)
 
-\method{check_equal}{ObjectState}(state, incorrect_msg = NULL,
-  append = TRUE, eq_condition = "equivalent", eq_fun = NULL, ...)
+\method{check_equal}{ObjectState}(
+  state,
+  incorrect_msg = NULL,
+  append = TRUE,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  ...
+)
 
-\method{check_equal}{ObjectColumnState}(state, incorrect_msg = NULL,
-  append = TRUE, eq_condition = "equivalent", eq_fun = NULL, ...)
+\method{check_equal}{ObjectColumnState}(
+  state,
+  incorrect_msg = NULL,
+  append = TRUE,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  ...
+)
 
-\method{check_equal}{ObjectElementState}(state, incorrect_msg = NULL,
-  append = TRUE, eq_condition = "equivalent", eq_fun = NULL, ...)
+\method{check_equal}{ObjectElementState}(
+  state,
+  incorrect_msg = NULL,
+  append = TRUE,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  ...
+)
 }
 \arguments{
 \item{state}{the state to start from}

@@ -4,8 +4,7 @@
 \alias{check_header}
 \title{Check markdown header}
 \usage{
-check_header(state, level, index = 1, not_found_msg = NULL,
-  append = TRUE)
+check_header(state, level, index = 1, not_found_msg = NULL, append = TRUE)
 }
 \arguments{
 \item{state}{the state to start from.}

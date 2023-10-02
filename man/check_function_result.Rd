@@ -8,19 +8,27 @@
 \alias{check_equal.OperationResultState}
 \title{Check the result of a function call/operation}
 \usage{
-\method{check_result}{OperationState}(state, error_msg = NULL,
-  append = TRUE, ...)
+\method{check_result}{OperationState}(state, error_msg = NULL, append = TRUE, ...)
 
-\method{check_result}{FunctionState}(state, error_msg = NULL,
-  append = TRUE, ...)
+\method{check_result}{FunctionState}(state, error_msg = NULL, append = TRUE, ...)
 
-\method{check_equal}{FunctionResultState}(state,
-  eq_condition = "equivalent", eq_fun = NULL, incorrect_msg = NULL,
-  append = TRUE, ...)
+\method{check_equal}{FunctionResultState}(
+  state,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  incorrect_msg = NULL,
+  append = TRUE,
+  ...
+)
 
-\method{check_equal}{OperationResultState}(state,
-  eq_condition = "equivalent", eq_fun = NULL, incorrect_msg = NULL,
-  append = TRUE, ...)
+\method{check_equal}{OperationResultState}(
+  state,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  incorrect_msg = NULL,
+  append = TRUE,
+  ...
+)
 }
 \arguments{
 \item{state}{the state to start from (for \code{check_} functions)}

@@ -7,14 +7,17 @@
 \alias{check_call}
 \title{Check whether the student defined a function correctly}
 \usage{
-check_fun_def(state, name, undefined_msg = NULL, no_fundef_msg = NULL,
-  append = TRUE)
+check_fun_def(
+  state,
+  name,
+  undefined_msg = NULL,
+  no_fundef_msg = NULL,
+  append = TRUE
+)
 
-check_arguments(state, incorrect_number_arguments_msg = NULL,
-  append = TRUE)
+check_arguments(state, incorrect_number_arguments_msg = NULL, append = TRUE)
 
-\method{check_body}{FunDefState}(state, not_found_msg = NULL,
-  append = TRUE, ...)
+\method{check_body}{FunDefState}(state, not_found_msg = NULL, append = TRUE, ...)
 
 check_call(state, ...)
 }

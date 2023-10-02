@@ -4,8 +4,7 @@
 \alias{check_library}
 \title{Check whether the library function was called correctly}
 \usage{
-check_library(state, package, not_called_msg = NULL,
-  incorrect_msg = NULL)
+check_library(state, package, not_called_msg = NULL, incorrect_msg = NULL)
 }
 \arguments{
 \item{state}{state to start from}

@@ -5,8 +5,7 @@
 \title{Check whether the student defined the correct chunk options (R Markdown
 exercises)}
 \usage{
-test_chunk_options(options = NULL, not_called_msg = NULL,
-  incorrect_msg = NULL)
+test_chunk_options(options = NULL, not_called_msg = NULL, incorrect_msg = NULL)
 }
 \arguments{
 \item{options}{Set of options}

@@ -7,17 +7,21 @@
 \alias{check_equal.ArgumentState}
 \title{Check whether a student correctly called a function/operator}
 \usage{
-check_function(state, name, index = 1, not_called_msg = NULL,
-  append = TRUE)
+check_function(state, name, index = 1, not_called_msg = NULL, append = TRUE)
 
-check_operator(state, name, index = 1, append = TRUE,
-  not_called_msg = NULL)
+check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 check_arg(state, arg, arg_not_specified_msg = NULL, append = TRUE)
 
-\method{check_equal}{ArgumentState}(state, incorrect_msg = NULL,
-  eval = TRUE, eq_condition = "equivalent", eq_fun = NULL,
-  append = TRUE, ...)
+\method{check_equal}{ArgumentState}(
+  state,
+  incorrect_msg = NULL,
+  eval = TRUE,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  append = TRUE,
+  ...
+)
 }
 \arguments{
 \item{state}{state to start from}

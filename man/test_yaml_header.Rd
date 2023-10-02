@@ -4,8 +4,12 @@
 \alias{test_yaml_header}
 \title{Check yaml header (Markdown)}
 \usage{
-test_yaml_header(options = NULL, check_equality = TRUE,
-  not_called_msg = NULL, incorrect_msg = NULL)
+test_yaml_header(
+  options = NULL,
+  check_equality = TRUE,
+  not_called_msg = NULL,
+  incorrect_msg = NULL
+)
 }
 \arguments{
 \item{options}{Set of options. Embedded options have to be specified using the dot notation.}

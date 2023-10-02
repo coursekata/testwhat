@@ -4,8 +4,14 @@
 \alias{check_predefined_objects}
 \title{Test predefined R objects}
 \usage{
-check_predefined_objects(state, name, eq_condition = "equivalent",
-  eval = TRUE, undefined_msg = NULL, incorrect_msg = NULL)
+check_predefined_objects(
+  state,
+  name,
+  eq_condition = "equivalent",
+  eval = TRUE,
+  undefined_msg = NULL,
+  incorrect_msg = NULL
+)
 }
 \arguments{
 \item{state}{the state to start from}

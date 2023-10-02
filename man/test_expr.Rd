@@ -12,23 +12,24 @@
 \usage{
 check_expr(state, expr)
 
-\method{check_result}{ExprState}(state, error_msg = NULL,
-  append = TRUE, ...)
+\method{check_result}{ExprState}(state, error_msg = NULL, append = TRUE, ...)
 
-\method{check_output}{ExprState}(state, error_msg = NULL,
-  append = TRUE, ...)
+\method{check_output}{ExprState}(state, error_msg = NULL, append = TRUE, ...)
 
-\method{check_error}{ExprState}(state, no_error_msg = NULL,
-  append = TRUE, ...)
+\method{check_error}{ExprState}(state, no_error_msg = NULL, append = TRUE, ...)
 
-\method{check_equal}{ExprResultState}(state, eq_condition = "equivalent",
-  eq_fun = NULL, incorrect_msg = NULL, append = TRUE, ...)
+\method{check_equal}{ExprResultState}(
+  state,
+  eq_condition = "equivalent",
+  eq_fun = NULL,
+  incorrect_msg = NULL,
+  append = TRUE,
+  ...
+)
 
-\method{check_equal}{ExprOutputState}(state, eq_fun = NULL,
-  incorrect_msg = NULL, append = TRUE, ...)
+\method{check_equal}{ExprOutputState}(state, eq_fun = NULL, incorrect_msg = NULL, append = TRUE, ...)
 
-\method{check_equal}{ExprErrorState}(state, eq_fun = NULL,
-  incorrect_msg = NULL, append = TRUE, ...)
+\method{check_equal}{ExprErrorState}(state, eq_fun = NULL, incorrect_msg = NULL, append = TRUE, ...)
 }
 \arguments{
 \item{state}{state to start from (only for \code{check_} functions)}
