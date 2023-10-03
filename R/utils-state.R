@@ -96,20 +96,9 @@ setup_state <- function(sol_code = "",
     list(type = "r-error", payload = paste0("Error: ", item$message))  
   }
   
-  get_allow_solution_error <- function() {
-    getOption("testwhat.allow_solution_error", FALSE)
-  }
-  
-  set_allow_solution_error <- function(value = FALSE) {
-    options("testwhat.allow_solution_error" = value)
-  }
-  
   get_error_level <- function() {
-    if (get_allow_solution_error()) 1 else 2
+    if (getOption("testwhat.allow_solution_error", FALSE)) 1 else 2
   }
-  
-  # record initial external options that may change during the exercise
-  initial_allow_solution_error <- get_allow_solution_error()
   
   if (is.null(sol_env)) {
     sol_env <- new_env()
@@ -137,10 +126,7 @@ setup_state <- function(sol_code = "",
   
   tw$clear()
   tw$set(success_msg = "Great work!")
-  
-  # reset options that may have been changed by the exercise
-  set_allow_solution_error(initial_allow_solution_error)
-  
+
   state <- RootState$new(
     pec = pec,
     student_code = stu_code,
