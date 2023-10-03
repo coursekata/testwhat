@@ -167,8 +167,7 @@ setup_state <- function(sol_code = "",
 #' without error-ing out. **Disclaimer**: this is just an attempt to emulate
 #' what would happen if you did the same thing in a DataCamp exercise, but we
 #' have no idea if it that how DataCamp actually accomplishes this.
-#'
-#' @return
+#' 
 #' @export
 allow_solution_error <- function() {
   base::options(testwhat.allow_solution_error = TRUE)
